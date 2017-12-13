@@ -5,6 +5,14 @@ default content if no content used
 
 {{end}}
 
+<!-- ************ -->
+
+{{ block "repeater" . }}
+
+this is default content that can repeat across pages
+
+{{end}}
+
 
 
 <!-- add the following code below to the file you want the content to display in -->
@@ -15,5 +23,18 @@ default content if no content used
 
 <!-- {{end}}  -->
 
+<!-- ************ -->
 
+<!-- {{ define "repeater" }} -->
+
+<!-- i dont want the default content on this particular repeater block (page) so am adding some here -->
+
+<!-- {{end}}  -->
+
+
+
+<!-- ************ -->
+
+<!-- KEEP IN MIND -->
+<!-- when adding the define part of the block DONT wrap in html boilerplate cause it doesnt work - not even sure about any other html content tbh - trial and error and check further documentation if used -->
 
