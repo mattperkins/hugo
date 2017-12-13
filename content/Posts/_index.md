@@ -4,4 +4,4 @@ date: "today"
 draft: true
 ---
 
-This is the Posts Index page
+This is the Posts _index.md
