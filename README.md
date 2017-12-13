@@ -19,6 +19,14 @@
 ## populate with desired custom front-matter meta data. 
 ## $hugo new posts/[page-name] creates new page in posts dir with custom archetypes
 
+# add tags
+## tags: ["black", "white"] 
+### on list page : <div>{{ if .Params.tags }}Tags:{{range .Params.tags}}<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
+
+# add categories
+## categories: ["summer", "winter"]
+### on list page : <div>{{ if .Params.categories }}<strong>Categories:</strong> {{range .Params.categories}}<a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
+
 # add theme
 ## hugo new theme [name]
 

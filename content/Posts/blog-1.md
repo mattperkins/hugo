@@ -5,6 +5,7 @@ draft: false
 author: "DORMshed"
 dir: "Posts"
 foo: "Something I wrote earlier"
+categories: ["summer", "winter"]
 ---
 
 Where does this content feature? 

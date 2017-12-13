@@ -5,6 +5,7 @@ draft: false
 author: "DORMshed"
 dir: "Posts"
 foo: "Imagination is all you need"
+categories: ["summer", "winter"]
 ---
 
 Today is going to be a great day

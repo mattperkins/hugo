@@ -5,4 +5,5 @@ draft: false
 author: "DORMshed"
 foo: "Add your foo here" 
 dir: "Posts"
+tags: ["white", "red"]
 ---
