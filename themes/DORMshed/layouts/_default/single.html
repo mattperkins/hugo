@@ -29,17 +29,22 @@ h1, footer{
 </head>
 <body>
 
-     {{ partial "header" (dict "Template" "Home") }}
+    <!-- access data from data/data.json -->
+    Pulling data from json file: {{ range .Site.Data.data }}
+        {{.name}}
+    {{end}}
+    <p>
+     {{ partial "header" (dict "Home" "Return to list view") }}
 
      <div>
          <!-- add color variable to post file front matter -->
-          <h1 style="color: {{ .Params.color}};">{{.Title}}</h1>
+          <h1 style="color:{{ .Params.color }};">{{.Title}}</h1>
           
           <!-- custom front matter from variable.md file -->
         <div class="highlight">{{ .Params.myVar }}</div>
 
         <!-- custom variable that renders in all single posts -->
-        <div class="highlight">{{ $myVarTwo := "a string, an int, a boolean" }}
+        <div class="highlight">{{ $myVarTwo := "A String, an Int, and a Boolean walk in to a bar " }}
             {{$myVarTwo}}
         </div>
 
