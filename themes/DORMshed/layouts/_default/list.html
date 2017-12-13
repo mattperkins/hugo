@@ -12,32 +12,32 @@ body{
 </head>
 <body>
      
-     <h1>This is the index view</h1>
-     <!-- {{ partial "header" (dict "Kind" .Kind "Template" "List") }} -->
-     
-     {{.Content}}
-     
-     {{ range .Pages }}
-     
-          <div>
-               <div>
-                    <a href="{{.URL}}">{{.Title}}</a>
-               </div>
-     
-               <div>{{ dateFormat "Monday, Jan 2, 2006" .Date }}</div>
-     
-               <div>{{ if .Params.tags }}<strong>Tags:</strong> {{range .Params.tags}}<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
-     
-               <div>{{ if .Params.categories }}<strong>Categories:</strong> {{range .Params.categories}}<a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
-     
-               <!-- <div>{{ if .Params.moods }}<strong>Moods:</strong> {{range .Params.moods}}<a href="{{ "/moods/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>  -->
+<h1>This is the LIST view</h1>
+<!-- {{ partial "header" (dict "Kind" .Kind "Template" "List") }} -->
 
-               <!-- <p>{{.Summary}}</p> -->
-          </div>
+{{.Content}}
 
-     {{ end }}
+{{ range .Pages }}
 
-     {{ partial "footer" . }}
+    <div>
+        <div>
+            <a href="{{.URL}}">{{.Title}}</a>
+        </div>
+
+        <div>{{ dateFormat "Monday, Jan 2, 2006" .Date }}</div>
+
+        <div>{{ if .Params.tags }}<strong>Tags:</strong> {{range .Params.tags}}<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
+
+        <div>{{ if .Params.categories }}<strong>Categories:</strong> {{range .Params.categories}}<a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
+
+        <div>{{ if .Params.lemons }}<strong>Lemons:</strong> {{range .Params.lemons}}<a href="{{ "/lemons/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div> 
+
+        <!-- <p>{{.Summary}}</p> -->
+    </div>
+
+{{ end }}
+
+{{ partial "footer" . }}
 
 </body>
 </html>

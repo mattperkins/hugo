@@ -2,3 +2,7 @@ baseURL = "http://www.dormshed.com/"
 languageCode = "en-uk"
 title = "HugeGo"
 theme = "DORMshed"
+[taxonomies]
+    tag = "tags"
+    category = "categories"
+    lemon = "lemons"

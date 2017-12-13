@@ -6,6 +6,7 @@ author: "DORMshed"
 dir: "Posts"
 foo: "This is a thing i wrote in the present"
 tags: ["white", "red"]
+lemons: ["I am Lemon"]
 ---
 
 hello hello hello 
