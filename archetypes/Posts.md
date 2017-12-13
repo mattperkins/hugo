@@ -1,7 +1,7 @@
 ---
 title: "{{ replace .TranslationBaseName "-" " " | title }}"
 date: {{ .Date }}
-draft: true
+draft: false
 author: "DORMshed"
-bar: "I am the odd one out"
+dir: "Posts"
 ---

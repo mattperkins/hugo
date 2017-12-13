@@ -1,5 +1,4 @@
-staticDir = ["static"]
 baseURL = "http://www.dormshed.com/"
 languageCode = "en-uk"
-title = "My New Hugo Site"
-theme = "DORMshed-theme"
+title = "HugeGo"
+theme = "DORMshed"
