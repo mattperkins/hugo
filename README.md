@@ -24,4 +24,4 @@
 # archetypes
 ## create a new file in archetypes folder called posts.md
 ## populate with desired custom front-matter meta data. 
-## $hugo new posts/[page-name] creates new page in posts dir with custom arhetypes
+## $hugo new posts/[page-name] creates new page in posts dir with custom archetypes
