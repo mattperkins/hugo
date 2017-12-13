@@ -42,3 +42,8 @@
 # shortcodes
 ### {{< shortRound >}} html text {{< /shortRound >}}
 ### {{% shortRound %}} use percentage when encapsulating *markdown* {{% /shortRound %}} 
+
+# Build and Deploy Hugo
+## $ Hugo 
+### Upload public contents to server.
+## ** Delete public folder before each new build ** 
