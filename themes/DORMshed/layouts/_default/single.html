@@ -7,9 +7,23 @@
 <style>
 body{
     font-size: 1.6rem;
+    color: #444;
 }
 .highlight{
-    color: red;
+    color: #ff0000;
+}
+.smtxt{
+    font-size: 1rem;
+    color: #333;
+}
+div{
+    padding: 2.5px 5px;
+}
+a{
+    color: rgb(87, 206, 235);
+}
+h1, footer{
+    color: #999;
 }
 </style>
 </head>
@@ -18,7 +32,8 @@ body{
      {{ partial "header" (dict "Template" "Home") }}
 
      <div>
-          <h1>{{.Title}}</h1>
+         <!-- add color variable to post file front matter -->
+          <h1 style="color: {{ .Params.color}};">{{.Title}}</h1>
           
           <!-- custom front matter from variable.md file -->
         <div class="highlight">{{ .Params.myVar }}</div>

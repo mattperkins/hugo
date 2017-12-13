@@ -7,11 +7,48 @@
 <style>
 body{
     font-size: 1.6rem;
+    color: #ff0000;
+}
+.smtxt{
+    font-size: 1rem;
+    color: #333;
+}
+div{
+    padding: 2.5px 5px;
+}
+a{
+    color: rgb(87, 206, 235);
+}
+h1, footer{
+    color: #999;
+}
+.logic{
+    color: royalblue;
+    font-size: 1rem;
 }
 </style>
 </head>
 <body>
-     
+
+    <!-- conditional statement example -->
+<div class="logic">
+{{ $var1 := "newPost" }}
+{{ $var2 := "oldPost" }}
+{{ if not (eq $var1 $var2) }}
+    All up to date!
+{{else}}
+    These are old posts!
+{{end}}
+
+<!-- lt = less than / ge = greater than or equal to -->
+{{ $v1 := 1 }} {{ $v2 := 2 }} {{ $v3 := 3 }} {{ $v4 := 4 }}
+{{ if and (lt $v1 $v2) (ge $v3 $v4) }}
+True
+{{ else }}
+False
+{{end}}
+</div>
+
 
 <!-- {{ partial "header" (dict "Kind" .Kind "Template" "List") }} -->
 <h1>Homepage</h1>
@@ -23,17 +60,16 @@ body{
     <div>
         <div>
             <a href="{{.URL}}">{{.Title}}</a>
+            <br>{{ truncate 30 .Summary}}
         </div>
 
-        <div>{{ dateFormat "Monday, Jan 2, 2006" .Date }}</div>
+        <div><span class="smtxt">{{ dateFormat "Monday, Jan 2, 2006" .Date }}</span></div>
 
-        <div>{{ if .Params.tags }}<strong>Tags:</strong> {{range .Params.tags}}<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
+        <div class="smtxt">{{ if .Params.tags }}<strong>Tags:</strong> {{range .Params.tags}}<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}{{ if .Params.categories }}<strong>Categories:</strong> {{range .Params.categories}}<a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
 
-        <div>{{ if .Params.categories }}<strong>Categories:</strong> {{range .Params.categories}}<a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
+        <div class="smtxt">{{ if .Params.lemons }}<strong>Lemons:</strong> {{range .Params.lemons}}<a href="{{ "/lemons/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div> 
 
-        <div>{{ if .Params.lemons }}<strong>Lemons:</strong> {{range .Params.lemons}}<a href="{{ "/lemons/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div> 
-
-        <!-- <p>{{.Summary}}</p> -->
+        
     </div>
 
 {{ end }}

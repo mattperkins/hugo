@@ -5,4 +5,7 @@ draft: false
 author: "DORMshed"
 bar: "I am the odd one out"
 myVar: "This is my Var"
+color: "Red"
 ---
+
+*These are my variables, they are the best*

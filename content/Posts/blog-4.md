@@ -7,3 +7,5 @@ foo: "Add your foo here"
 dir: "Posts"
 tags: ["white", "red"]
 ---
+
+Who said blog 4 wasn't awesome?
