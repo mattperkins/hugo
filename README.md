@@ -39,3 +39,6 @@
 ## git clone theme into themes folder
 ## add theme = "theme-name" to config.toml
 
+# shortcodes
+### {{< shortRound >}} html text {{< /shortRound >}}
+### {{% shortRound %}} use percentage when encapsulating *markdown* {{% /shortRound %}} 

@@ -10,3 +10,13 @@ color: "Green"
 Lime welcomes the Lemon company
 
 
+{{< myshortcodes color="pink" >}}
+
+{{< shorty purple >}}
+
+{{< shortRound >}}
+    You call him Dr. Jones, Daallll!
+{{< /shortRound >}}
+
+
+
