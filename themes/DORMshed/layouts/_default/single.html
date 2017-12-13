@@ -8,6 +8,9 @@
 body{
     font-size: 1.6rem;
 }
+.highlight{
+    color: red;
+}
 </style>
 </head>
 <body>
@@ -17,15 +20,23 @@ body{
      <div>
           <h1>{{.Title}}</h1>
           
-          <div>{{ dateFormat "Monday, Jan 2, 2006" .Date }}</div>
+          <!-- custom front matter from variable.md file -->
+        <div class="highlight">{{ .Params.myVar }}</div>
 
-          <div>{{if .Params.author}}Author: {{.Params.Author}}{{end}}</div>
+        <!-- custom variable that renders in all single posts -->
+        <div class="highlight">{{ $myVarTwo := "a string, an int, a boolean" }}
+            {{$myVarTwo}}
+        </div>
 
-          <div>{{if .Params.foo}}Foo: {{.Params.Foo}}{{end}}</div>
+        <div>{{ dateFormat "Monday, Jan 2, 2006" .Date }}</div>
 
-          <div>{{if .Params.bar}}Bar: {{.Params.Bar}}{{end}}</div>
+        <div>{{if .Params.author}}Author: {{.Params.Author}}{{end}}</div>
 
-          <div>{{.Content}}</div>
+        <div>{{if .Params.foo}}Foo: {{.Params.Foo}}{{end}}</div>
+
+        <div>{{if .Params.bar}}Bar: {{.Params.Bar}}{{end}}</div>
+
+        <div>{{.Content}}</div>
      </div>
 
      {{ partial "footer" . }}

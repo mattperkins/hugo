@@ -5,8 +5,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
+<style>
+body{
+    font-size: 1.6rem;
+}
+</style>
     <body>
-    
+ {{ partial "header" . }}
+
 {{ range .Pages }}
 
         <div>
@@ -15,7 +21,7 @@
 
 {{ end }}
 
-<!-- footer taken from theme -->
+
  {{ partial "footer" . }}
     </body>
 </html>
