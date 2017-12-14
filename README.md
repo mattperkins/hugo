@@ -1,3 +1,5 @@
+# http://hugogo.surge.sh/
+
 # run dev server / drafts
 ## hugo server -D
 
