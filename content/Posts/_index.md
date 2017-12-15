@@ -1,7 +1,7 @@
 ---
 title: "_Index"
 date: "today"
-draft: true
+draft: false
 ---
 
 This is the Posts _index.md
